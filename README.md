@@ -1,4 +1,8 @@
-# {featureTitle} Test Cases
+# feature testing template 
+
+---
+
+## {featureTitle} Test Cases
 
 ---
 
@@ -20,7 +24,7 @@ write the objective of this test case.
 
 **Expected Results:**
 
-* Tthe results that you exprect
+* The results that you expect
 * as a tester from this test case
 
 **Test Result:**
@@ -29,17 +33,17 @@ write the objective of this test case.
 
 **Justification:**
 
-* the result is not **pass** then you have to write a justification expalining why
+* the result is not ✅**pass** then you have to write a justification expalining why
 
 ---
 
-Multiple 
-test
-cases 
-with
-the 
-same
-template
+**Multiple** 
+**test**
+**cases**
+**with**
+**the**
+**same**
+**template**
 
 ---
 
