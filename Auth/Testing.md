@@ -24,9 +24,9 @@ Ensure that restricted pages cannot be accessed by unauthenticated users.
 * No restricted data is shown
 
 **Test Result:**
+✅ **PASS**
 
-**Justification:**
-
+**Justification:** worked as expected the user got redirected to the login page 
 ---
 
 ### Auth-02: Sign Up with Used Email
@@ -51,8 +51,9 @@ Ensure system prevents sign-up with an email already in use
 * A clear error message is shown (e.g., "Email already exists")
 
 **Test Result:**
+✅ **PASS**
 
-**Justification:**
+**Justification:** worked as expected an error message is shown "A user with this email already exists."
 
 ---
 
@@ -78,8 +79,9 @@ Ensure system prevents sign-up with a taken username
 * A clear error message is displayed (e.g., "Username already taken")
 
 **Test Result:**
+✅ **PASS**
 
-**Justification:**
+**Justification:** worked as expected an error message is shown "A user with this username already exists."
 
 ---
 
@@ -104,6 +106,7 @@ Verify that users can register successfully with valid credentials
 * User is prompted to verify their email
 
 **Test Result:**
+⚠️ **BLOCKED**
 
 **Justification:**
 
@@ -130,8 +133,9 @@ Ensure that users cannot log in with incorrect email or password
 * No session or token is saved
 
 **Test Result:**
+✅ **PASS**
 
-**Justification:**
+**Justification:**worked as expected an error message is shown "Login failed. Please check your credentials."
 
 ---
 
@@ -155,6 +159,7 @@ Ensure unverified users are blocked from accessing the platform
 * A message prompts user to verify their email
 
 **Test Result:**
+⚠️ **BLOCKED**
 
 **Justification:**
 
@@ -180,6 +185,7 @@ Verify the user can activate their account through the email link
 * Redirects to login or home page with success message
 
 **Test Result:**
+⚠️ **BLOCKED**
 
 **Justification:**
 
@@ -205,6 +211,7 @@ Ensure the user can resend verification if the first one was not received
 * Confirmation message is shown
 
 **Test Result:**
+⚠️ **BLOCKED**
 
 **Justification:**
 
@@ -229,9 +236,10 @@ Ensure system handles invalid/non-existent email in password reset
 * A message is shown like "If an account exists, a reset link will be sent"
 * No data is leaked about registered accounts
 
-**Test Result:**
+**Test Result:** 
+✅ **PASS**
 
-**Justification:**
+**Justification:** worked better than expected an error message is shown "This email does not have an account."
 
 ---
 
@@ -256,8 +264,9 @@ Verify reset link is sent for valid registered email
 * Message confirms that instructions were sent
 
 **Test Result:**
+✅ **PASS**
 
-**Justification:**
+**Justification:** worked as expected with minor problem an reset link was sent from "contact@idigics.com" but "the email was put in spam⚠️"
 
 ---
 
@@ -282,8 +291,9 @@ Allow login when credentials are correct and email is verified
 * Token/session is saved
 
 **Test Result:**
+✅ **PASS**
 
-**Justification:**
+**Justification:** worked as expected the user is redirected to "/admin/user"
 
 ---
 
@@ -308,6 +318,7 @@ Ensure password change works with correct old password
 * Success message is shown
 
 **Test Result:**
+✅ **PASS**
 
 **Justification:**
 
@@ -334,8 +345,11 @@ Ensure password change fails with incorrect old password
 * Error message is shown (e.g., "Old password incorrect")
 
 **Test Result:**
+✅ **PASS**
 
-**Justification:**
+**Justification:** worked as expected an error message was shown "Incorrect password please try again later."
+
+
 
 ---
 
@@ -359,8 +373,30 @@ Ensure users cannot access unauthorized routes despite being logged in
 * A proper error or redirect is provided
 
 **Test Result:**
+✅ **PASS**
 
-**Justification:**
+**Justification:** worked as expected the user got redirected to "/AccessDenied" 
+
+---
+
+## 🔍 Test Execution Summary
+
+| Test Case ID | Title | Result | Notes |
+|--------------|-------|--------|-------|
+| Auth-01 | Access Different Pages Without Being Logged In | ✅ PASS |  |
+| Auth-02 | Sign Up with Used Email | ✅ PASS |  |
+| Auth-03 | Sign Up with Used Username | ✅ PASS |  |
+| Auth-04 | Sign Up with Valid Data | ⚠️ BLOCKED | Missing result and justification |
+| Auth-05 | Sign In with Invalid Credentials | ✅ PASS | |
+| Auth-06 | Sign In with Unverified Email | ⚠️ BLOCKED | Missing result and justification |
+| Auth-07 | Verify Email | ⚠️ BLOCKED | Missing result and justification |
+| Auth-08 | Resend Verification Email | ⚠️ BLOCKED | Missing result and justification |
+| Auth-09 | Forgot Password with Invalid Email | ✅ PASS | |
+| Auth-10 | Forgot Password with Valid Email | ✅ PASS |Reset link sent, but email went to spam ⚠️ |
+| Auth-11 | Sign In with Verified Email | ✅ PASS | |
+| Auth-12 | Change Password with Valid Old Password | ✅ PASS |  |
+| Auth-13 | Change Password with Invalid Old Password | ✅ PASS |  |
+| Auth-14 | Access Denied Pages with Being Logged In | ✅ PASS |  |
 
 ---
 

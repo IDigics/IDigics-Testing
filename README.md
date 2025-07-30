@@ -33,7 +33,7 @@ write the objective of this test case.
 
 **Justification:**
 
-* the result is not ✅**pass** then you have to write a justification expalining why
+* optional if the result is : "✅ **PASS**" else required
 
 ---
 
@@ -44,6 +44,16 @@ write the objective of this test case.
 **the**
 **same**
 **template**
+
+---
+
+## 🔍 Test Execution Summary
+
+| Test Case ID | Title | Result | Notes |
+|--------------|-------|--------|-------|
+| id 1 | title 1 | result 1 | note 1 (if exist) |
+| ... | ... | ... | ... |
+| id N | title N | result N | note N (if exisit) |
 
 ---
 
