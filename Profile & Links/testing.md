@@ -538,6 +538,7 @@ Ensure the vCard saves the correct data as a contact on the phone.
 | Profile-23   | Show CV in Profile                      | ✅ PASS |       |
 | Profile-24   | Download CV                             | ✅ PASS |       |
 | Profile-25   | QR Code Test                            | ✅ PASS |       |
+| Profile-26   | vCard Test                              | ✅ PASS |       |
 
 ---
 
