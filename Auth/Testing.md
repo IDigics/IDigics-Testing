@@ -106,9 +106,11 @@ Verify that users can register successfully with valid credentials
 * User is prompted to verify their email
 
 **Test Result:**
-⚠️ **BLOCKED**
+✅ **PASS**
 
-**Justification:**
+**Justification:** worked as expected, the user was redirected to the email verification page, and an email containing a verification link was sent to the user's email address.
+
+
 
 ---
 
@@ -159,9 +161,11 @@ Ensure unverified users are blocked from accessing the platform
 * A message prompts user to verify their email
 
 **Test Result:**
-⚠️ **BLOCKED**
+✅ **PASS**
 
-**Justification:**
+**Justification:** an error message is shown "Login failed. Please check your credentials."
+
+
 
 ---
 
@@ -185,9 +189,9 @@ Verify the user can activate their account through the email link
 * Redirects to login or home page with success message
 
 **Test Result:**
-⚠️ **BLOCKED**
+✅ **PASS**
 
-**Justification:**
+**Justification:** 
 
 ---
 
@@ -211,9 +215,9 @@ Ensure the user can resend verification if the first one was not received
 * Confirmation message is shown
 
 **Test Result:**
-⚠️ **BLOCKED**
+✅ **PASS**
 
-**Justification:**
+**Justification:** worked as expected user can ask the server to resend the verification email to another email adress or the same one
 
 ---
 
@@ -381,22 +385,22 @@ Ensure users cannot access unauthorized routes despite being logged in
 
 ## 🔍 Test Execution Summary
 
-| Test Case ID | Title | Result | Notes |
-|--------------|-------|--------|-------|
-| Auth-01 | Access Different Pages Without Being Logged In | ✅ PASS |  |
-| Auth-02 | Sign Up with Used Email | ✅ PASS |  |
-| Auth-03 | Sign Up with Used Username | ✅ PASS |  |
-| Auth-04 | Sign Up with Valid Data | ⚠️ BLOCKED | Missing result and justification |
-| Auth-05 | Sign In with Invalid Credentials | ✅ PASS | |
-| Auth-06 | Sign In with Unverified Email | ⚠️ BLOCKED | Missing result and justification |
-| Auth-07 | Verify Email | ⚠️ BLOCKED | Missing result and justification |
-| Auth-08 | Resend Verification Email | ⚠️ BLOCKED | Missing result and justification |
-| Auth-09 | Forgot Password with Invalid Email | ✅ PASS | |
-| Auth-10 | Forgot Password with Valid Email | ✅ PASS |Reset link sent, but email went to spam ⚠️ |
-| Auth-11 | Sign In with Verified Email | ✅ PASS | |
-| Auth-12 | Change Password with Valid Old Password | ✅ PASS |  |
-| Auth-13 | Change Password with Invalid Old Password | ✅ PASS |  |
-| Auth-14 | Access Denied Pages with Being Logged In | ✅ PASS |  |
+| Test Case ID |                    Title                       |   Result   |                         Notes                          |
+|--------------|------------------------------------------------|------------|------------------------------------------------------- |
+| Auth-01      | Access Different Pages Without Being Logged In | ✅ PASS    |                                                        |
+| Auth-02      | Sign Up with Used Email                        | ✅ PASS    |                                                        |
+| Auth-03      | Sign Up with Used Username                     | ✅ PASS    |                                                        |
+| Auth-04      | Sign Up with Valid Data                        | ✅ PASS    |                                                        |
+| Auth-05      | Sign In with Invalid Credentials               | ✅ PASS    |                                                        |
+| Auth-06      | Sign In with Unverified Email                  | ✅ PASS    |                                                        |
+| Auth-07      | Verify Email                                   | ✅ PASS    |                                                        |
+| Auth-08      | Resend Verification Email                      | ✅ PASS    |                                                        |
+| Auth-09      | Forgot Password with Invalid Email             | ✅ PASS    |                                                        |
+| Auth-10      | Forgot Password with Valid Email               | ✅ PASS    | Reset link sent, but email was delivered to spam ⚠️      |
+| Auth-11      | Sign In with Verified Email                    | ✅ PASS    |                                                        |
+| Auth-12      | Change Password with Valid Old Password        | ✅ PASS    |                                                        |
+| Auth-13      | Change Password with Invalid Old Password      | ✅ PASS    |                                                        |
+| Auth-14      | Access Denied Pages with Being Logged In       | ✅ PASS    |                                                        |
 
 ---
 
